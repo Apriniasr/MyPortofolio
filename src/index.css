@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --font-cursive: 'Edu NSW ACT', cursive;
+  --font-outfit: 'outfit', outfit;
+  --font-quick: 'quicksand', quick;
+}
+
+.font-cursive { font-family: var(--font-cursive); }
+.font-outfit { font-family: var(--font-outfit); }
+.font-quick { font-family: var(--font-quick); }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 1.0s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Delay Waktu Masuk */
+.animate-delay-100 { animation-delay: 0.15s; }
+.animate-delay-200 { animation-delay: 0.3s; }
+.animate-delay-300 { animation-delay: 0.45s; }
